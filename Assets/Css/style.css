@@ -2,10 +2,15 @@ body{
     margin: 0;
 }
 
+img{
+    max-width: 95% ;
+}
+
 nav{
     grid-area: nav;
 
     background-color: rgb(255, 155, 74);
+
 }
 main{
     grid-area: main;
@@ -13,12 +18,14 @@ main{
 }
 aside{
     grid-area: aside;
-    background-color: orange;
+    background-color: rgb(2, 7, 53);
     color: white;
+    
+    
 }
 footer{
     grid-area: footer;
-    background-color: rgb(91, 91, 91);
+    background-color: rgb(80, 80, 80);
     color: white;
     text-align: center;
 }
@@ -43,18 +50,27 @@ footer{
 }
 
 .menu{
-width: 100%;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 20px;
+    width: 80%;
+    text-align: ;
 }
 
 .logo{
     img{
-        width: 130px;
+        width: 120px;
         margin: 10px;
+        margin-left: 20px;
     }
 }
 
+.prod{
+    font-size: 30px;
+}
+
 .icono{
-    margin: 10px 20px 10px 10px;
+    margin: 10px 40px 10px 10px;
 }
 .aside{ 
     display: flex;
@@ -68,13 +84,60 @@ width: 100%;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    color: white;
 
     *{
-        margin: 0;
+        margin-bottom: 10px;
 
     }
     
 
+}
+.main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+}
+.etiqueta{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+background-color: white;
+width: 80%;
+margin: 20px;
+text-align: center;
+border-radius: 5px;
+border: 1px solid orange ;
+
+button{
+
+    width: 100%;
+    background-color: blue;
+    color: white;
+    border-radius: 2px;
+    height: 40px;  
+}
+
+button:hover{
+    background-color: orange;
+}
+
+}
+
+.footer{
+display: flex;
+align-items: center;
+justify-content: center;
+    h3{
+        color: rgb(160, 160, 160);
+        margin: 0;
+    }
+    i{
+        color: rgb(160, 160, 160) ;
+        margin: 0;
+    }
 }
 
 @media (width >= 576px){
