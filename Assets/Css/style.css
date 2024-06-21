@@ -1,171 +1,292 @@
-body{
+body {
     margin: 0;
+    font-family: "Play", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
-img{
-    max-width: 95% ;
+img {
+    max-width: 95%;
 }
 
-nav{
+nav {
     grid-area: nav;
 
     background-color: rgb(255, 155, 74);
 
 }
-main{
+
+main {
     grid-area: main;
     background-color: rgb(197, 197, 197);
 }
-aside{
+
+aside {
     grid-area: aside;
     background-color: rgb(2, 7, 53);
     color: white;
-    
-    
+
+
 }
-footer{
+
+footer {
     grid-area: footer;
     background-color: rgb(80, 80, 80);
     color: white;
     text-align: center;
+    font-family: 'Courier New', Courier, monospace;
 }
 
-.container{
+.container {
     display: grid;
     grid-template-areas:
-    'aside'
-    'nav'
-    'main'
-    'footer' ;
+        'aside'
+        'nav'
+        'main'
+        'footer';
 
     height: 100vh;
     grid-template-columns: auto;
     grid-template-rows: 10% 10% auto 10%;
 }
 
-.busqueda > *{
+.busqueda>* {
     text-align: center;
     margin: 0;
     width: 100%;
 }
 
-.menu{
+.menu {
     background-color: rgb(255, 255, 255);
     border: none;
     border-radius: 20px;
     width: 80%;
-    text-align: ;
 }
 
-.logo{
-    img{
+.logo {
+    img {
         width: 120px;
         margin: 10px;
         margin-left: 20px;
     }
 }
 
-.prod{
+.prod {
     font-size: 30px;
 }
 
-.icono{
+.icono {
     margin: 10px 40px 10px 10px;
 }
-.aside{ 
+
+.aside {
     display: flex;
-    align-items:center ;
+    align-items: center;
     justify-content: space-between;
 
 }
 
-.nav{
+.ordenar{
+    display: none;
+}
+
+.nav {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     color: white;
 
-    *{
+    * {
         margin-bottom: 10px;
 
     }
-    
 
-}
-.main{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-}
-.etiqueta{
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-background-color: white;
-width: 80%;
-margin: 20px;
-text-align: center;
-border-radius: 5px;
-border: 1px solid orange ;
-
-button{
-
-    width: 100%;
-    background-color: blue;
-    color: white;
-    border-radius: 2px;
-    height: 40px;  
-}
-
-button:hover{
-    background-color: orange;
-}
 
 }
 
-.footer{
-display: flex;
-align-items: center;
-justify-content: center;
-    h3{
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.etiqueta {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    margin: 20px;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid orange;
+    max-width: 280px;
+    min-width: 280px;
+    min-height: 500px;
+
+    img {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+    }
+
+    button {
+
+        width: 100%;
+        background-color: blue;
+        color: white;
+        border-radius: 2px;
+        height: 40px;
+    }
+
+    button:hover {
+        background-color: orange;
+    }
+
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    h3 {
         color: rgb(160, 160, 160);
         margin: 0;
     }
-    i{
-        color: rgb(160, 160, 160) ;
+
+    i {
+        color: rgb(160, 160, 160);
         margin: 0;
     }
 }
+ /*
+@media (width >=576px) {
 
-@media (width >= 576px){
-
-.container{
-    display: grid;
-    grid-template-areas:
-    'aside aside'
-    'nav main'
-    'footer footer' ;
-
-    height: 100vh;
-    grid-template-columns: 15% auto;
-    grid-template-rows: 10% auto 10%;
-}
-}
-
-@media (width >= 992px){
-   
-    .container{
+    .container {
         display: grid;
         grid-template-areas:
-        'aside nav'
-        'aside main'
-        'footer main' ;
-    
+            'aside aside'
+            'nav main'
+            'footer footer';
+
         height: 100vh;
         grid-template-columns: 15% auto;
         grid-template-rows: 10% auto 10%;
     }
+}
+*/
+
+@media (width >=576px) {
+
+    .container {
+        display: grid;
+        grid-template-areas:
+            'aside nav'
+            'aside main'
+            'footer main';
+
+        height: 100vh;
+        grid-template-columns: 15% auto;
+        grid-template-rows: 10% auto 10%;
     }
+
+    .main {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+
+    }
+
+    .etiqueta {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        background-color: white;
+        margin: 20px;
+        text-align: center;
+        border-radius: 5px;
+        border: 1px solid orange;
+        max-width: 280px;
+        max-height: 500px;
+
+        img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        button {
+
+            width: 100%;
+            background-color: blue;
+            color: white;
+            border-radius: 2px;
+            height: 40px;
+        }
+
+        button:hover {
+            background-color: orange;
+        }
+
+    }
+
+    .etiqueta:hover{
+        box-shadow: 0 10px 20px rgba(0, 0,0,0.20);
+    }
+
+    .etiqueta:hover img{
+        transform: scale(1.2);
+        transition: all .5s;
+    }
+
+    .etiqueta figure{
+        overflow: hidden;
+        width: 90%;
+        height: 100%;
+    }
+
+    .logo {
+        img {
+            width: 120px;
+            margin: 10px;
+            margin-left: 20px;
+        }
+    }
+    
+    .prod {
+        display: none;
+    }
+    
+    .icono {
+        display: none;
+    }
+    
+    .aside {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+    
+    }
+
+    .ordenar{
+        display: flex;
+        flex-direction: column;
+          color: white;
+          margin-left: 20px;
+      
+        
+      
+          p{
+              font-size: 80%;
+          }
+      }
+      
+      .seccion{
+          color: orange;
+      }
+
+}
